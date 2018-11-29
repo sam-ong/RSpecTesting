@@ -13,7 +13,9 @@ class Calculator
   def divide(a,b)
     a/b
   end
-
+  def factorial_of(n)
+    (1..n).inject(:*)
+  end
 end
 
 describe Calculator do
@@ -29,5 +31,8 @@ describe Calculator do
   end
   it "should divide 120 by 3" do
     expect(calculator.divide(120,3)).to eq(40)
+  end
+  it "should get the factorial of 5" do
+    expect(calculator.factorial_of(5)).to eq(120)
   end
 end

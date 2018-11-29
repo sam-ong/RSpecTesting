@@ -3,7 +3,7 @@ require 'rspec/autorun'
 class Factorial
   def factorial_of(n)
     (1..n).inject(:*)
- end
+  end
 end
 
 describe Factorial do
